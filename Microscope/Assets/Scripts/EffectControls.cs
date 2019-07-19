@@ -11,7 +11,6 @@ public class EffectControls : MonoBehaviour
     public GameObject info_button;
 
     public int activeObjective = 1;
-    public GameObject[] objectives;
 
     public Sprite button_on;
     public Sprite button_off;
@@ -19,7 +18,7 @@ public class EffectControls : MonoBehaviour
     public Slider brightness;
 
     private float cam_x = 0;
-    private float cam_y = 10;
+    //private float cam_y = 10;
     private float cam_z = 0;
 
     private bool lampIsOn = false;
@@ -35,21 +34,9 @@ public class EffectControls : MonoBehaviour
         blurScript.Iterations = -6;
         gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_Brightness", -1);
         slideCamera.transform.position = new Vector3(0,10,0);
-        SwitchActiveObjective(0);
     }
 
 
-    public void SwitchActiveObjective(int obj)
-    {
-        foreach (GameObject button in objectives)
-        {
-            button.GetComponent<Image>().sprite = button_off;
-        }
-
-        objectives[obj].GetComponent<Image>().sprite = button_on;
-        Vector3 pos = slideCamera.transform.position;
-        slideCamera.transform.position = new Vector3(pos.x,zoomFloats[obj],pos.z);
-    } 
 
     public void ToggleInfo()
     {
