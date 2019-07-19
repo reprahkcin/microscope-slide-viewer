@@ -10,7 +10,7 @@ public class SlideDeck : MonoBehaviour
     public GameObject header;
 
     public GameObject slideTitle;
-    public GameObject slideTitleShadow;
+  
 
     public Slide[] slides;
 
@@ -38,7 +38,6 @@ public class SlideDeck : MonoBehaviour
 
         string slideTitleText = "Please Load a Slide";
         slideTitle.GetComponentInChildren<TextMeshProUGUI>().text = slideTitleText;
-        slideTitleShadow.GetComponentInChildren<TextMeshProUGUI>().text = slideTitleText;
 
         RemoveButtons();
     }
@@ -80,7 +79,6 @@ public class SlideDeck : MonoBehaviour
     {
         string slideTitleText = slides[slideIndex].GetComponent<Slide>().title;
         slideTitle.GetComponent<TextMeshProUGUI>().text = slideTitleText;
-        slideTitleShadow.GetComponent<TextMeshProUGUI>().text = slideTitleText;
     }
 
     public void BuildButtons(int slideIndex)
