@@ -3,7 +3,14 @@ guid: 27bf04537d3e5ab46b2d48cf7f85bf94
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - slideCamera: {instanceID: 0}
+  - microscopeCamera: {instanceID: 0}
+  - light_button: {instanceID: 0}
+  - info_button: {instanceID: 0}
+  - button_on: {fileID: 21300000, guid: 3c69ec7949abb8943b600f884cb7153c, type: 3}
+  - button_off: {fileID: 21300000, guid: 168bef34b8049bf47a24ca7700700420, type: 3}
+  - brightness: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

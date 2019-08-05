@@ -16,6 +16,7 @@ public class Slide : MonoBehaviour
     public void LoadMagnification(int magIndex)
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = Magnifications[magIndex];
+        activeMagnification = magIndex;
     }
 
 
@@ -42,6 +43,7 @@ public class Slide : MonoBehaviour
     public void DisplayMagnification(int i)
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = Magnifications[i];
+        activeMagnification = i;
     }
 
 }

@@ -89,7 +89,7 @@ public class SlideDeck : MonoBehaviour
         {
             GameObject btn = Instantiate(buttonPrefab, header.transform);
             btn.GetComponentInChildren<TextMeshProUGUI>().text = slides[slideIndex].MagBtnLabels[i];
-            btn.AddComponent<MagBtnScript>();
+            //btn.AddComponent<MagBtnScript>();
             btn.GetComponent<MagBtnScript>().SetID(i);
             buttons[i] = btn;
         }
